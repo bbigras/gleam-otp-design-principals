@@ -714,14 +714,15 @@ a secure distributed node.
 
 ** Starting up nodes.
 
+#+begin_src gleam
 fn main() {
-  ... some stuff ...
+  // ... some stuff ...
         net_kernel_start([
           atom.create_from_string("dilbert@localhost"),
           atom.create_from_string("shortnames"),
         ])
       process.start(ping_all, True)
-  ... more stuff ...
+  // ... more stuff ...
 }
 
 fn ping_all() {
@@ -741,6 +742,8 @@ fn ping_all() {
   process.sleep(10000)
   ping_all()
 }
+#+end_src
+
 - mention that shortname or longname, not both.
 
 
